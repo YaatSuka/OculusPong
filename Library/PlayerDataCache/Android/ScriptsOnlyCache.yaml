@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - DiskEvents
+    - DiskSpawn
     - ONSPSettings
     - VrGrabber.VrgGrabbable
     - VrGrabber.VrgGrabber
@@ -84,9 +85,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10940}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11840}
+      Script: {instanceID: 11482}
+    - Class: 114
+      Script: {instanceID: 11842}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -740,7 +743,7 @@ ScriptsOnlyBuild:
     className: OVRResetOrientation
   - hash:
       serializedVersion: 2
-      Hash: d161543e6f462390e4dc5663d2909ef6
+      Hash: e6e3e978b0fddc9514f78444e38e5551
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DiskEvents
@@ -924,6 +927,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 7bcb92f4b682963a8f067a3fa1b0b3a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DiskSpawn
   - hash:
       serializedVersion: 2
       Hash: 8f71d2ab3258f223c82a0616125cd43f
