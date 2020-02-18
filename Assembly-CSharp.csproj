@@ -332,7 +332,7 @@
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationSettings.cs" />
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPSettings.cs" />
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
-     <Compile Include="Assets\Scripts\DiskRebound.cs" />
+     <Compile Include="Assets\Scripts\DiskEvents.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgDevice.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgFloatingObject.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgGrabbable.cs" />
