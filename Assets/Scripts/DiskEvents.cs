@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DiskEvents : MonoBehaviour
 {
-    public float maxSpeed = 10.0f;
+    public float maxSpeed = 20.0f;
     public float maxLifeTime = 10.0f;
     private float lifeTime;
     private bool hasBeenGrabbed = false;
+    private bool isGrabbed = false;
     private Rigidbody rigidbody;
     private GameObject diskSpawn;
 
@@ -27,6 +28,10 @@ public class DiskEvents : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        if (!isGrabbed && hasBeenGrabbed) {
+            transform.Rotate(new Vector3(0.0f, 10.0f, 0.0f), Space.Self);
+        }
     }
 
     public void onGrabbed()
@@ -34,20 +39,24 @@ public class DiskEvents : MonoBehaviour
         transform.eulerAngles = Vector3.zero;
         lifeTime = maxLifeTime;
         hasBeenGrabbed = true;
+        isGrabbed = true;
     }
 
     public void onReleased()
     {
-        //transform.eulerAngles = Vector3.zero;
-        
+        rigidbody.velocity *= 2;
+
         if (rigidbody.velocity.magnitude > maxSpeed) {
             rigidbody.velocity = rigidbody.velocity.normalized * maxSpeed;
         }
+
+        isGrabbed = false;
     }
 
     public void onGrabMove()
     {
         //transform.eulerAngles = Vector3.zero;
+        lifeTime = maxLifeTime;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -58,6 +67,7 @@ public class DiskEvents : MonoBehaviour
         }
         if (collision.gameObject.tag == "Wall") {
             // Make some particles effects + sound
+            GetComponent<DiskSounds>().PlayWallImpact();
         }
     }
 }

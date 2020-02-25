@@ -334,6 +334,8 @@
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
      <Compile Include="Assets\Scripts\DiskEffects.cs" />
      <Compile Include="Assets\Scripts\DiskEvents.cs" />
+     <Compile Include="Assets\Scripts\DiskSlower.cs" />
+     <Compile Include="Assets\Scripts\DiskSounds.cs" />
      <Compile Include="Assets\Scripts\DiskSpawn.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgDevice.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgFloatingObject.cs" />
