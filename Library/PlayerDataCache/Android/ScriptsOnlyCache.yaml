@@ -6,7 +6,10 @@ ScriptsOnlyBuild:
     - DiskSlower
     - DiskSounds
     - DiskSpawn
+    - MoveTarget
     - ONSPSettings
+    - StaticTarget
+    - TargetSpawn
     - VrGrabber.VrgGrabbable
     - VrGrabber.VrgGrabber
     - VrGrabber.VrgTargetLine
@@ -80,29 +83,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10494}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10586}
+      Script: {instanceID: 10496}
     - Class: 114
-      Script: {instanceID: 10708}
+      Script: {instanceID: 10588}
     - Class: 114
-      Script: {instanceID: 10772}
+      Script: {instanceID: 10710}
     - Class: 114
-      Script: {instanceID: 10836}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 10876}
+      Script: {instanceID: 10838}
     - Class: 114
-      Script: {instanceID: 10912}
+      Script: {instanceID: 10878}
     - Class: 114
-      Script: {instanceID: 10944}
+      Script: {instanceID: 10914}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 11848}
+    - Class: 114
+      Script: {instanceID: 12378}
+    - Class: 114
+      Script: {instanceID: 18204}
+    - Class: 114
+      Script: {instanceID: 23788}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -466,6 +475,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: c93ad9900423fb8dfc74d695f269bd2a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveTarget
   - hash:
       serializedVersion: 2
       Hash: 08620780b69fc9e76cd687022de1f5b6
@@ -1564,6 +1579,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 64ef40d6f8e72887b36fd07d1b0bedfb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StaticTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 647f6aa61add5e7d7d1ee071a083353d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TargetSpawn
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
