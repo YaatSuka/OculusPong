@@ -11,12 +11,14 @@ public class DiskEvents : MonoBehaviour
     private bool isGrabbed = false;
     private Rigidbody rigidbody;
     private GameObject diskSpawn;
+    private GameObject grabber;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         diskSpawn = GameObject.FindWithTag("DiskSpawn");
         lifeTime = maxLifeTime;
+        grabber = GameObject.FindWithTag("HandController");
     }
 
     void Update()
@@ -36,7 +38,6 @@ public class DiskEvents : MonoBehaviour
 
     public void onGrabbed()
     {
-        transform.eulerAngles = Vector3.zero;
         lifeTime = maxLifeTime;
         hasBeenGrabbed = true;
         isGrabbed = true;

@@ -221,7 +221,7 @@ public class VrgGrabber : MonoBehaviour
             collider.GetComponent<VrgGrabbable>() ??
             collider.GetComponentInParent<VrgGrabbable>();
         if (!grabbable) return;
-
+        
         CandidateInfo info;
         if (!directGrabCandidates_.TryGetValue(collider, out info))
         {
@@ -356,6 +356,11 @@ public class VrgGrabber : MonoBehaviour
             hit.collider.GetComponent<VrgGrabbable>() ??
             hit.collider.GetComponentInParent<VrgGrabbable>();
 
+        // Rotation reset OnGrab
+        if (grabbable) {
+            hit.collider.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
         if (grabbable)
         {
             Grab(grabbable, hit.distance);
@@ -449,7 +454,8 @@ public class VrgGrabber : MonoBehaviour
         {
             dist = Mathf.Lerp(grabInfo_.distance, actualDist, 0.05f);
         }
-        grabInfo_.distance = dist;
+        //grabInfo_.distance = dist;
+        grabInfo_.distance = 0.5f;
 
         var mat = grabInfo_.gripToGrabbableMat;
         var pos = mat.GetPosition();
