@@ -8,7 +8,7 @@ public class DiskSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instantiate(disk, transform.position, Quaternion.identity);
     }
 
     public void spawn()

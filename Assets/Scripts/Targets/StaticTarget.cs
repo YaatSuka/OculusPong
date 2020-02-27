@@ -2,18 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticTarget : MonoBehaviour
+public class StaticTarget : Target
 {
-    public float RotationSpeed = 1.0f;
+    public float rotationSpeed = 0.5f;
+    public float lifeTime = 20;
+
+    private bool hit = false;
+    private float remainTime;
+    private GameObject gameController;
+
     // Start is called before the first frame update
     void Start()
     {
-        RotationSpeed = (Random.Range(0, 2) == 0) ? RotationSpeed : -RotationSpeed - 1;
+        transform.Rotate(new Vector3(45.0f, 0.0f, 0.0f));
+        rotationSpeed = (Random.Range(0, 2) == 0) ? rotationSpeed : -rotationSpeed - 1;
+        remainTime = lifeTime;
+        gameController = GameObject.Find("GameController");
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0.0f, RotationSpeed, 0.0f), Space.Self);
+        remainTime -= Time.deltaTime;
+         if (remainTime <= 0) {
+             Destroy(gameObject);
+         }
+
+        transform.Rotate(new Vector3(0.0f, rotationSpeed, 0.0f), Space.World);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Disk" && !hit) {
+            hit = true;
+            gameController.GetComponent<ScoreController>().AddScore(value);
+            Destroy(gameObject);
+        }
     }
 }

@@ -337,8 +337,12 @@
      <Compile Include="Assets\Scripts\Disk\DiskSlower.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskSounds.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskSpawn.cs" />
+     <Compile Include="Assets\Scripts\Player\LifeController.cs" />
+     <Compile Include="Assets\Scripts\Player\ScoreController.cs" />
      <Compile Include="Assets\Scripts\Targets\MoveTarget.cs" />
+     <Compile Include="Assets\Scripts\Targets\ScoreTarget.cs" />
      <Compile Include="Assets\Scripts\Targets\StaticTarget.cs" />
+     <Compile Include="Assets\Scripts\Targets\Target.cs" />
      <Compile Include="Assets\Scripts\Targets\TargetSpawn.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgDevice.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgFloatingObject.cs" />

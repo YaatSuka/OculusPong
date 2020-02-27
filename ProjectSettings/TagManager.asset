@@ -8,6 +8,7 @@ TagManager:
   - DiskSpawn
   - Wall
   - HandController
+  - Disk
   layers:
   - Default
   - TransparentFX

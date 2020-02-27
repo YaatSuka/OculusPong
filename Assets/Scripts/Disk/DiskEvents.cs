@@ -12,6 +12,7 @@ public class DiskEvents : MonoBehaviour
     private Rigidbody rigidbody;
     private GameObject diskSpawn;
     private GameObject grabber;
+    private GameObject gameController;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class DiskEvents : MonoBehaviour
         diskSpawn = GameObject.FindWithTag("DiskSpawn");
         lifeTime = maxLifeTime;
         grabber = GameObject.FindWithTag("HandController");
+        gameController = GameObject.Find("GameController");
     }
 
     void Update()
@@ -63,12 +65,17 @@ public class DiskEvents : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Target") {
-            Destroy(collision.gameObject);
             // Add some particles effects + sound
         }
         if (collision.gameObject.tag == "Wall") {
             // Make some particles effects + sound
             GetComponent<DiskSounds>().PlayWallImpact();
+        }
+        if (collision.gameObject.name == "WallBack") {
+            diskSpawn.GetComponent<DiskSpawn>().spawn();
+            gameController.GetComponent<LifeController>().decreaseLife();
+            GetComponent<DiskSlower>().resetTime();
+            Destroy(gameObject);
         }
     }
 }

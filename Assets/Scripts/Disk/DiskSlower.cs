@@ -5,31 +5,32 @@ using UnityEngine;
 public class DiskSlower : MonoBehaviour
 {
     public float slowDistance = 8.0f;
-    public float timeScale = 0.4f;
+    public float timeScale = 0.2f;
     
     private GameObject player;
     private bool diskGoBack = false;
     private bool isGrabbed = false;
     private Vector3 diskLastPos;
+    private float fixedDeltaTime;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         diskLastPos = transform.position;
+        fixedDeltaTime = Time.fixedDeltaTime;
         InvokeRepeating("checkDiskDirection", 0.5f, 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (!isGrabbed && diskGoBack && Vector3.Distance(player.transform.position, transform.position) <= slowDistance) {
         if (!isGrabbed && diskGoBack && transform.position.z >= (player.transform.position.z - slowDistance)) {
             Time.timeScale = timeScale;
-            Application.targetFrameRate = 1200;
+            Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
         } else if (transform.position.z > player.transform.position.z || !diskGoBack) {
             Time.timeScale = 1.0f;
-            Application.targetFrameRate = -1;
+            Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
         }
     }
 
@@ -48,7 +49,7 @@ public class DiskSlower : MonoBehaviour
     public void onReleased()
     {
         Time.timeScale = 1.0f;
-        Application.targetFrameRate = -1;
+        Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
         diskGoBack = false;
         isGrabbed = false;
     }
@@ -56,8 +57,14 @@ public class DiskSlower : MonoBehaviour
     public void onGrabbed()
     {
         Time.timeScale = 1.0f;
-        Application.targetFrameRate = -1;
+        Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
         diskGoBack = false;
         isGrabbed = true;
     }
+
+     public void resetTime()
+     {
+        Time.timeScale = 1.0f;
+        Time.fixedDeltaTime = fixedDeltaTime * Time.timeScale;
+     }
 }

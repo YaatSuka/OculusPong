@@ -45,8 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 2357452585121764369, guid: 863f226556ddab94f92a463b674e9f79, type: 3}
-  - {fileID: 7286245009016720506, guid: 0f9725801b1eb3548a534102c87f1387, type: 3}
-  xMax: 13
-  yMax: 4
-  zMax: 10
+  - {fileID: 2357452585121764369, guid: ccec2985c8270d044b41ffb0d1d46a0d, type: 3}
+  - {fileID: 2500212740486550223, guid: af35e75e3d6251b44b06d0a577d35e51, type: 3}
+  - {fileID: 2500212740486550223, guid: ecc42ae57cb509a4d9c3d7f13b1bf792, type: 3}
+  xMax: 12
+  yMax: 3
+  zMax: 9
   maxTargets: 5
+  maxBadTargets: 2
