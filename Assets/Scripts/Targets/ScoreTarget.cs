@@ -7,6 +7,8 @@ public class ScoreTarget : MonoBehaviour
     public float lifeTime = 1.5f;
     public int score;
 
+    private const int scaleValue = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,10 @@ public class ScoreTarget : MonoBehaviour
         TextMesh textMesh = GetComponent<TextMesh>();
 
         textMesh.text = (score > 0) ? "+" + score.ToString() : score.ToString();
+
+        textMesh.fontSize = 6 * scaleValue;
+        textMesh.transform.localScale = textMesh.transform.localScale / scaleValue;
+
         textMesh.color = (score > 0) ? Color.green : Color.red;
     }
 }

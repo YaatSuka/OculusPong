@@ -8,12 +8,13 @@ public class Target : MonoBehaviour
 
     public GameObject scoreText;
 
-    void OnDestroy()
+    public void DisplayScore()
     {
         GameObject obj = Instantiate(scoreText, transform.position, Quaternion.identity);
         ScoreTarget scoreTarget = obj.GetComponent<ScoreTarget>();
 
         scoreTarget.score = value;
         scoreTarget.Display();
+        Destroy(gameObject);
     }
 }

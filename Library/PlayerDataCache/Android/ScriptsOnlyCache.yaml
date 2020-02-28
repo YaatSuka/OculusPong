@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - MoveTarget
     - ONSPSettings
     - ScoreController
+    - ScoreTarget
     - StaticTarget
     - TargetSpawn
     - VrGrabber.VrgGrabbable
@@ -35,6 +36,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.UI.CanvasScaler
@@ -118,21 +120,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10884}
     - Class: 114
-      Script: {instanceID: 10920}
+      Script: {instanceID: 10898}
     - Class: 114
-      Script: {instanceID: 10952}
+      Script: {instanceID: 10922}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 10954}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11928}
+      Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 12304}
+      Script: {instanceID: 11932}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12308}
+    - Class: 114
+      Script: {instanceID: 12390}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -506,7 +510,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 6bb222d3a4eb5b7f7f484030f08daae1
+      Hash: c08ef5200d796f9c5dcdb6f0ade06a75
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveTarget
@@ -626,7 +630,7 @@ ScriptsOnlyBuild:
     className: TeleportTransitionWarp
   - hash:
       serializedVersion: 2
-      Hash: 647f6aa61add5e7d7d1ee071a083353d
+      Hash: fee37ff9efcbdbedb896f8efb27b30be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TargetSpawn
@@ -816,6 +820,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: VrGrabber
     className: VrgGrabbable
+  - hash:
+      serializedVersion: 2
+      Hash: 7b7e59c9c62e7fab2d38b1e1a55e3a20
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreTarget
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1304,6 +1314,12 @@ ScriptsOnlyBuild:
     className: OVRMeshRenderer
   - hash:
       serializedVersion: 2
+      Hash: 16d3b0e7eb391c462d22e75322e29771
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Target
+  - hash:
+      serializedVersion: 2
       Hash: dbb1a6051987b4922d94d1caad387b1c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1544,7 +1560,7 @@ ScriptsOnlyBuild:
     className: WindmillController
   - hash:
       serializedVersion: 2
-      Hash: 3d46c19b15369c3660b273f392b12fe9
+      Hash: 3c3485062be2535e272b4676128ff1b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StaticTarget

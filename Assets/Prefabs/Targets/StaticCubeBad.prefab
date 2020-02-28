@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9991173f79c74f74a89b117e59868704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: -5
+  value: -10
   scoreText: {fileID: 1664726913513039341, guid: 4ee47cd0e50964149ade0d6bb4d4af68,
     type: 3}
   rotationSpeed: 0.5
