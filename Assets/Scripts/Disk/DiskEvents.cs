@@ -65,7 +65,7 @@ public class DiskEvents : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Target") {
-            // Add some particles effects + sound
+            // Add stuff
         }
         if (collision.gameObject.tag == "Wall") {
             // Make some particles effects + sound

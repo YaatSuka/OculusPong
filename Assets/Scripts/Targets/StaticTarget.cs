@@ -36,6 +36,7 @@ public class StaticTarget : Target
         if (collision.gameObject.tag == "Disk" && !hit) {
             hit = true;
             gameController.GetComponent<ScoreController>().AddScore(value);
+
             DisplayScore();
         }
     }

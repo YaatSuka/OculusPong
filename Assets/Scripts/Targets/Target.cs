@@ -15,6 +15,9 @@ public class Target : MonoBehaviour
 
         scoreTarget.score = value;
         scoreTarget.Display();
+
+        GetComponent<TargetSound>().Play();
+
         Destroy(gameObject);
     }
 }

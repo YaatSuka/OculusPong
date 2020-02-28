@@ -46,10 +46,10 @@ public class MoveTarget : Target
          float y = Random.Range(speedMin, speedMax);
          float z = (Mathf.Abs(transform.position.z - player.transform.position.z) <= minDistance) ? Random.Range(speedMin, 0) : Random.Range(speedMin, speedMax);
 
-        //if (collision) {
-            //x *= -1;
-            //y *= -1;
-        //}
+        if (collision) {
+            x *= -1;
+            y *= -1;
+        }
 
         // Cancel forces
         rb.velocity = Vector3.zero;
@@ -64,6 +64,7 @@ public class MoveTarget : Target
         if (col.gameObject.tag == "Disk" && !hit) {
             hit = true;
             gameController.GetComponent<ScoreController>().AddScore(value);
+
             DisplayScore();
         }
      }

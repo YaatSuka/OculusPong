@@ -343,6 +343,7 @@
      <Compile Include="Assets\Scripts\Targets\ScoreTarget.cs" />
      <Compile Include="Assets\Scripts\Targets\StaticTarget.cs" />
      <Compile Include="Assets\Scripts\Targets\Target.cs" />
+     <Compile Include="Assets\Scripts\Targets\TargetSound.cs" />
      <Compile Include="Assets\Scripts\Targets\TargetSpawn.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgDevice.cs" />
      <Compile Include="Assets\VrGrabber\Scripts\VrgFloatingObject.cs" />

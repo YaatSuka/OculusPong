@@ -5,15 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class DiskSounds : MonoBehaviour
 {
-     public AudioSource wallImpact;
+     AudioSource audioSource;
 
     void Start()
     {
-        wallImpact = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PlayWallImpact()
     {
-        wallImpact.Play(0);
+        audioSource.Play(0);
     }
 }

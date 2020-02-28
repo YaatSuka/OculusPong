@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - ScoreController
     - ScoreTarget
     - StaticTarget
+    - TargetSound
     - TargetSpawn
     - VrGrabber.VrgGrabbable
     - VrGrabber.VrgGrabber
@@ -137,6 +138,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12308}
     - Class: 114
       Script: {instanceID: 12390}
+    - Class: 114
+      Script: {instanceID: 17854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1632,7 +1635,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 618a050e08d14aabbac8f9abc87baa82
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DiskSounds
@@ -1648,6 +1651,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TargetSound
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
