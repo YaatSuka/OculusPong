@@ -337,6 +337,8 @@
      <Compile Include="Assets\Scripts\Disk\DiskSlower.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskSounds.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskSpawn.cs" />
+     <Compile Include="Assets\Scripts\FX\ParticleSystemController.cs" />
+     <Compile Include="Assets\Scripts\FX\WallImpact.cs" />
      <Compile Include="Assets\Scripts\Player\LifeController.cs" />
      <Compile Include="Assets\Scripts\Player\ScoreController.cs" />
      <Compile Include="Assets\Scripts\Targets\MoveTarget.cs" />
