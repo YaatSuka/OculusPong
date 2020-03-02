@@ -332,6 +332,7 @@
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationSettings.cs" />
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPSettings.cs" />
      <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
+     <Compile Include="Assets\RobotSphere\Assets\Scripts\RobotFreeAnim.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskEffects.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskEvents.cs" />
      <Compile Include="Assets\Scripts\Disk\DiskSlower.cs" />
