@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowDistance: 8
-  timeScale: 0.5
+  timeScale: 0.2
 --- !u!1001 &3194842487837313486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,11 +354,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 432615775725960001}
     m_Modifications:
-    - target: {fileID: 293941137715893649, guid: 37acb01225646bb4fa464a835407a884,
-        type: 3}
-      propertyPath: m_Name
-      value: DiskTrail
-      objectReference: {fileID: 0}
     - target: {fileID: 2738677056917696495, guid: 37acb01225646bb4fa464a835407a884,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -413,6 +408,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293941137715893649, guid: 37acb01225646bb4fa464a835407a884,
+        type: 3}
+      propertyPath: m_Name
+      value: DiskTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37acb01225646bb4fa464a835407a884, type: 3}
