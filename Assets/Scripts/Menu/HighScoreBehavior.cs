@@ -11,7 +11,12 @@ public class HighScoreBehavior : MonoBehaviour
     private List<HighscoreEntry> highScoreEntryList;
     private List<Transform> highScoreEntryTransformList;
     public Transform[] selectorArr;
-    private string path = "Assets/Scripts/Menu/highScore";
+    private string path = "highScore";
+
+
+    // debug to delete
+
+    public Text DebugText;
 
 
     private void Awake()
@@ -41,10 +46,10 @@ public class HighScoreBehavior : MonoBehaviour
         
         selectorArr = new Transform[10];
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 5; i++){
             CreateArrayInfoScore( entryContainer, highScoreEntryTransformList, i);
         }
-        //  UpdateHighScore(0);
+          UpdateHighScore(0);
     }
 
     public void UpdateHighScore(int SelectedTimeMode)
@@ -66,7 +71,7 @@ public class HighScoreBehavior : MonoBehaviour
         }
 
         highScoreEntryTransformList = new List<Transform>();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
             CreateHighscoreEntryTransform(highscore.highScoreEntryList[i], i, highScoreEntryTransformList);
         }
@@ -79,9 +84,9 @@ public class HighScoreBehavior : MonoBehaviour
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
 
         if (rank < 5)
-            entryRectTransform.anchoredPosition = new Vector2(-100f, -templateHeight * rank + 55f);
-        else
-            entryRectTransform.anchoredPosition = new Vector2(100f, -templateHeight * (rank - 5) + 55f);
+            entryRectTransform.anchoredPosition = new Vector2(0f, -templateHeight * rank + 55f);
+       /* else
+            entryRectTransform.anchoredPosition = new Vector2(100f, -templateHeight * (rank - 5) + 55f); */
         entryTransform.gameObject.SetActive(true);
 
         entryTransform.Find("number").GetComponent<Text>().text = (rank + 1).ToString();
@@ -124,11 +129,9 @@ public class HighScoreBehavior : MonoBehaviour
 
     private string ReadFileJson(int SelectedTimeMode)
     {
-
         //Read the text from directly from the test.txt file
-        StreamReader reader = new StreamReader(path + "Mode" + SelectedTimeMode + ".json");
-        string result = reader.ReadToEnd();
-        reader.Close();
+        TextAsset theList = Resources.Load<TextAsset>(path + "Mode" + SelectedTimeMode);
+        string result = theList.text;
 
         return result;
     }

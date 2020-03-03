@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class modeHighScore : MonoBehaviour
 {
      private Button o_btn;
-    public static int TimeMode = 0;
     public Dictionary<string, int> gameMode;
 	public HighScoreBehavior changeHS;
 
