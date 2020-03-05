@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class TimerController : MonoBehaviour
 {
     float timeLeft = 60.0f;
+
     private bool isInfinit = false;
     private Text ui;
+    private GameController gameController;
 
     // Start is called before the first frame update
   // Start is called before the first frame update
     void Start()
     {
-        switch (modeBehavior.TimeMode)
+        gameController = GetComponent<GameController>();
+
+        switch (GameOptions.timeMode)
         {
         case 3:
             isInfinit = true;
@@ -39,6 +43,10 @@ public class TimerController : MonoBehaviour
         if(!isInfinit)
         {
             timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0) {
+                gameController.GameOver();
+                return;
+            }
 
             string minutes = Mathf.Floor(timeLeft / 60).ToString("00");
             string seconds = (timeLeft % 60).ToString("00");

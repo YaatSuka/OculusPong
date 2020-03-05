@@ -1,12 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonManager
     - DiskEffects
     - DiskEvents
     - DiskSlower
     - DiskSounds
     - DiskSpawn
+    - GameController
+    - GameOptions
+    - GameOverMenuController
     - HighScoreBehavior
+    - InputFieldController
+    - InputFieldManager
+    - KeyboardManager
     - LaserPointer
     - LifeController
     - MenuButtonBehaviors
@@ -27,7 +34,6 @@ ScriptsOnlyBuild:
     - WallImpact
     - modeBehavior
     - modeHighScore
-    - saveName
     Oculus.VR.Editor.dll:
     - OVRConfig
     Oculus.VR.dll:
@@ -56,7 +62,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/MainScene.unity:
@@ -101,61 +106,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 9856}
+      Script: {instanceID: 9858}
     - Class: 114
-      Script: {instanceID: 9972}
+      Script: {instanceID: 9976}
     - Class: 114
-      Script: {instanceID: 9990}
+      Script: {instanceID: 9994}
     - Class: 114
-      Script: {instanceID: 10070}
+      Script: {instanceID: 10048}
     - Class: 114
-      Script: {instanceID: 10178}
+      Script: {instanceID: 10074}
     - Class: 114
-      Script: {instanceID: 10212}
+      Script: {instanceID: 10186}
     - Class: 114
-      Script: {instanceID: 10308}
+      Script: {instanceID: 10220}
     - Class: 114
-      Script: {instanceID: 10402}
+      Script: {instanceID: 10316}
     - Class: 114
-      Script: {instanceID: 10526}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10596}
+      Script: {instanceID: 10532}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10602}
     - Class: 114
-      Script: {instanceID: 10614}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10642}
+      Script: {instanceID: 10620}
     - Class: 114
-      Script: {instanceID: 10726}
+      Script: {instanceID: 10648}
     - Class: 114
-      Script: {instanceID: 10780}
+      Script: {instanceID: 10732}
     - Class: 114
-      Script: {instanceID: 10794}
+      Script: {instanceID: 10786}
     - Class: 114
-      Script: {instanceID: 10858}
+      Script: {instanceID: 10800}
     - Class: 114
-      Script: {instanceID: 10898}
+      Script: {instanceID: 10864}
     - Class: 114
-      Script: {instanceID: 10914}
+      Script: {instanceID: 10904}
     - Class: 114
-      Script: {instanceID: 10938}
+      Script: {instanceID: 10906}
     - Class: 114
-      Script: {instanceID: 10972}
+      Script: {instanceID: 10922}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 10946}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 10996}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11088}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 12418}
+      Script: {instanceID: 11202}
     - Class: 114
-      Script: {instanceID: 22776}
+      Script: {instanceID: 11212}
+    - Class: 114
+      Script: {instanceID: 11532}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 11970}
+    - Class: 114
+      Script: {instanceID: 12224}
+    - Class: 114
+      Script: {instanceID: 12232}
+    - Class: 114
+      Script: {instanceID: 12350}
+    - Class: 114
+      Script: {instanceID: 12364}
+    - Class: 114
+      Script: {instanceID: 12434}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -173,6 +194,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -214,53 +237,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9846}
     - Class: 114
-      Script: {instanceID: 9972}
+      Script: {instanceID: 9854}
     - Class: 114
-      Script: {instanceID: 9990}
+      Script: {instanceID: 9966}
     - Class: 114
-      Script: {instanceID: 10044}
+      Script: {instanceID: 9976}
     - Class: 114
-      Script: {instanceID: 10070}
+      Script: {instanceID: 9994}
     - Class: 114
-      Script: {instanceID: 10178}
+      Script: {instanceID: 10048}
     - Class: 114
-      Script: {instanceID: 10472}
+      Script: {instanceID: 10074}
     - Class: 114
-      Script: {instanceID: 10502}
+      Script: {instanceID: 10086}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10186}
     - Class: 114
-      Script: {instanceID: 10628}
+      Script: {instanceID: 10508}
     - Class: 114
-      Script: {instanceID: 10726}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 10858}
+      Script: {instanceID: 10634}
     - Class: 114
-      Script: {instanceID: 10966}
+      Script: {instanceID: 10732}
     - Class: 114
-      Script: {instanceID: 10972}
+      Script: {instanceID: 10864}
     - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 10974}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11484}
+      Script: {instanceID: 11202}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 11896}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 12224}
+    - Class: 114
+      Script: {instanceID: 12232}
+    - Class: 114
+      Script: {instanceID: 12364}
+    - Class: 114
+      Script: {instanceID: 12416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -336,6 +365,12 @@ ScriptsOnlyBuild:
     className: PlayButton
   - hash:
       serializedVersion: 2
+      Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputFieldController
+  - hash:
+      serializedVersion: 2
       Hash: 04c2641b9a15b7b95eeeb393eae1e5b9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -388,6 +423,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRDebugHeadController
+  - hash:
+      serializedVersion: 2
+      Hash: 0d7d35aaa4958f7930711c0d987cbf96
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeyboardManager
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -472,6 +513,18 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.VR.dll
     namespaceName: 
     className: OVRRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverBehavior
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOptions
   - hash:
       serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
@@ -676,12 +729,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: saveName
   - hash:
       serializedVersion: 2
       Hash: 9337d9b49ef69a8f6b3c9e840a9d2fe6
@@ -984,6 +1031,12 @@ ScriptsOnlyBuild:
     className: VrgGrabbable
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimerController
+  - hash:
+      serializedVersion: 2
       Hash: 7b7e59c9c62e7fab2d38b1e1a55e3a20
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1042,6 +1095,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
     className: OVROverlaySample
+  - hash:
+      serializedVersion: 2
+      Hash: 2d32dd5a3d147011604c73f567a5734f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1114,6 +1173,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverMenuController
   - hash:
       serializedVersion: 2
       Hash: ab9b3242e7f7cea8eb7d313db01cc29d
@@ -1410,6 +1475,12 @@ ScriptsOnlyBuild:
     className: HighScoreBehavior
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonManager
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1486,6 +1557,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DebugUIBuilder
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputFieldManager
   - hash:
       serializedVersion: 2
       Hash: 505a6714ae02fdc2e1ba29de535a4cc5
@@ -1846,20 +1923,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TimerController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameOverBehavior
   platform: 13
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Users/nopal/OneDrive/Bureau/unity project/oculuspong/Build/v2.apk
+  playerPath: C:/Users/Tom/Desktop/UVIC/Courses/Semester 1/Videogame Programming/oculuspong/Build/V1.apk

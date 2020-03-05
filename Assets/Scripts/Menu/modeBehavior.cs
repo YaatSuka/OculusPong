@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class modeBehavior : MonoBehaviour
 {
-    private Button o_btn;
-    public static int TimeMode = 0;
     public Dictionary<string, int> gameMode;
 
+    private GameOptions gameOptions;
+    private Button o_btn;
 
 	void Start () {
         gameMode = new Dictionary<string, int>(){
@@ -16,14 +16,15 @@ public class modeBehavior : MonoBehaviour
             {"Button 5", 1}, 
             {"Button 10", 2}, 
             {"Button NL", 3}
-        }; 
+        };
+
+        gameOptions = GameObject.Find("Canvas Option").GetComponent<GameOptions>();
 
 		o_btn = this.GetComponent<Button>();
 		o_btn.onClick.AddListener(EventOnClick);
 	}
 
 	void EventOnClick(){
-        TimeMode = gameMode[o_btn.name];
-		Debug.Log ("You have clicked the option button! The actual mode is " + TimeMode.ToString());
+        gameOptions.UpdateTimeMode(gameMode[o_btn.name]);
 	}
 }
