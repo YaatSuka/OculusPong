@@ -72,10 +72,10 @@ public class DiskEvents : MonoBehaviour
             GetComponent<DiskSounds>().PlayWallImpact();
         }
         if (collision.gameObject.name == "WallBack") {
+            Destroy(gameObject);
             diskSpawn.GetComponent<DiskSpawn>().spawn();
             gameController.GetComponent<LifeController>().decreaseLife();
             GetComponent<DiskSlower>().resetTime();
-            Destroy(gameObject);
         }
     }
 }
