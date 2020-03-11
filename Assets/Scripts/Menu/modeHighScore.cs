@@ -24,6 +24,5 @@ public class modeHighScore : MonoBehaviour
 
 	void EventOnClick(){
         changeHS.UpdateHighScore(gameMode[o_btn.name]);
-        Debug.Log("Event Update");
 	}
 }

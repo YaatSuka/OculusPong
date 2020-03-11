@@ -12,7 +12,6 @@ public class BackMenuButton : MonoBehaviour
 	void Start() {
 		Button play = this.GetComponent<Button>();
 		play.onClick.AddListener(LoadGame);
-        options = GameObject.Find("Canvas Option").GetComponent<GameOptions>();
 	}
 
     public void LoadGame()

@@ -14,11 +14,6 @@ public class HighScoreBehavior : MonoBehaviour
     private string path = "highScore";
 
 
-    // debug to delete
-
-    public Text DebugText;
-
-
     private void Awake()
     {
         entryContainer = transform.Find("Score Panel");
@@ -106,7 +101,7 @@ public class HighScoreBehavior : MonoBehaviour
         selectorArr[rank].Find("score").GetComponent<Text>().text = score.ToString();
     }
 
-    private void AddHighscoreEntry(int score, string name, int SelectedTimeMode){
+    public void AddHighscoreEntry(int score, string name, int SelectedTimeMode){
         HighscoreEntry highScoreEntry = new HighscoreEntry {score = score, name = name};
         
        // string jsonString = PlayerPrefs.GetString("highScoreTable");
@@ -120,11 +115,15 @@ public class HighScoreBehavior : MonoBehaviour
 
     private void WriteFileJson(string json, int SelectedTimeMode)
     {
-        File.WriteAllText(path + "Mode" + SelectedTimeMode + ".json", string.Empty);
+        //File.WriteAllText(path + "Mode" + SelectedTimeMode + ".json", string.Empty);
         //Write some text to the test.txt file
-        StreamWriter writer = new StreamWriter(path + "Mode" + SelectedTimeMode + ".json", true);
-        writer.WriteLine(json);
-        writer.Close();
+        //StreamWriter writer = new StreamWriter(path + "Mode" + SelectedTimeMode + ".json", true);
+        //TextAsset theList = Resources.Load<TextAsset>(path + "Mode" + SelectedTimeMode);
+        //theList.text = json;
+        string Json_path = Path.Combine(Application.persistentDataPath, "Resources", 
+                path + "Mode" + SelectedTimeMode + ".json");
+
+        File.WriteAllText(Json_path, json);
     }
 
     private string ReadFileJson(int SelectedTimeMode)
